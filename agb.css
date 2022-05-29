@@ -1,0 +1,30 @@
+body {
+    background-color: #3d3d3d;
+}
+
+.border {
+    --angle: 0deg;
+    width: 150px;
+    height: 175px;
+    border: 10px solid;
+    border-image: linear-gradient(var(--angle), #00cc99, #eef0f5) 1;
+    animation: 10s rotate linear infinite;
+    -webkit-animation: 10s rotate linear infinite;
+    -moz-animation: 10s rotate linear infinite;
+    -z-animation: 10s rotate linear infinite;
+    -o-animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+ @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* currently doesn't support firefox browser */
